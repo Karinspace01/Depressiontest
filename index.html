@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depression Self-Assessment Test (PHQ-9)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8f5e9;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            color: #2e7d32;
+        }
+        .question {
+            text-align: left;
+            margin: 15px 0;
+            display: none;
+        }
+        .question.active {
+            display: block;
+        }
+        button {
+            background: #388e3c;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #1b5e20;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .result-container {
+            background-color: #dcedc8;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: gray;
+            text-align: left;
+        }
+        .back-button {
+            background-color: #2e7d32;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            padding: 10px;
+            width: 200px;
+            margin: auto;
+        }
+        .back-button:hover {
+            background-color: #1b5e20;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Depression Self-Assessment Test (PHQ-9)</h2>
+
+        <form id="depressionTest">
+            <div class="question active">
+                <p>1. Little interest or pleasure in doing things?</p>
+                <input type="radio" name="q1" value="0"> Not at all <br>
+                <input type="radio" name="q1" value="1"> Several days <br>
+                <input type="radio" name="q1" value="2"> More than half the days <br>
+                <input type="radio" name="q1" value="3"> Nearly every day <br>
+            </div>
+
+            <div class="question">
+                <p>2. Feeling down, depressed, or hopeless?</p>
+                <input type="radio" name="q2" value="0"> Not at all <br>
+                <input type="radio" name="q2" value="1"> Several days <br>
+                <input type="radio" name="q2" value="2"> More than half the days <br>
+                <input type="radio" name="q2" value="3"> Nearly every day <br>
+            </div>
+
+           <div class="question">
+                <p>3. Trouble falling or staying asleep, or sleeping too much?</p>
+                <input type="radio" name="q3" value="0"> Not at all <br>
+                <input type="radio" name="q3" value="1"> Several days <br>
+                <input type="radio" name="q3" value="2"> More than half the days <br>
+                <input type="radio" name="q3" value="3"> Nearly every day <br>
+            </div>
+ 
+           <div class="question">
+                <p>4. Feeling tired or having little energy?</p>
+                <input type="radio" name="q4" value="0"> Not at all <br>
+                <input type="radio" name="q4" value="1"> Several days <br>
+                <input type="radio" name="q4" value="2"> More than half the days <br>
+                <input type="radio" name="q4" value="3"> Nearly every day <br>
+            </div>
+          
+           <div class="question">
+                <p>5. Poor appetite or overeating?</p>
+                <input type="radio" name="q5" value="0"> Not at all <br>
+                <input type="radio" name="q5" value="1"> Several days <br>
+                <input type="radio" name="q5" value="2"> More than half the days <br>
+                <input type="radio" name="q5" value="3"> Nearly every day <br>
+            </div>
+          
+           <div class="question">
+                <p>6. Feeling bad about yourself — or that you are a failure or have let yourself or your family down?</p>
+                <input type="radio" name="q6" value="0"> Not at all <br>
+                <input type="radio" name="q6" value="1"> Several days <br>
+                <input type="radio" name="q6" value="2"> More than half the days <br>
+                <input type="radio" name="q6" value="3"> Nearly every day <br>
+            </div>
+          
+           <div class="question">
+                <p>7. Trouble concentrating on things, such as reading the newspaper or watching television?</p>
+                <input type="radio" name="q7" value="0"> Not at all <br>
+                <input type="radio" name="q7" value="1"> Several days <br>
+                <input type="radio" name="q7" value="2"> More than half the days <br>
+                <input type="radio" name="q7" value="3"> Nearly every day <br>
+            </div>
+          
+           <div class="question">
+                <p>8. Moving or speaking so slowly that other people could have noticed?  Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual?</p>
+                <input type="radio" name="q8" value="0"> Not at all <br>
+                <input type="radio" name="q8" value="1"> Several days <br>
+                <input type="radio" name="q8" value="2"> More than half the days <br>
+                <input type="radio" name="q8" value="3"> Nearly every day <br>
+            </div>
+
+           <div class="question">
+                <p>9. Thoughts that you would be better off dead or of hurting yourself in some way?</p>
+                <input type="radio" name="q9" value="0"> Not at all <br>
+                <input type="radio" name="q9" value="1"> Several days <br>
+                <input type="radio" name="q9" value="2"> More than half the days <br>
+                <input type="radio" name="q9" value="3"> Nearly every day <br>
+            </div>
+               
+            <div class="question">
+                <p>10. If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?</p>
+                <input type="radio" name="q10" value="0"> Not difficult at all <br>
+                <input type="radio" name="q10" value="1"> Somewhat difficult <br>
+                <input type="radio" name="q10" value="2"> Very difficult <br>
+                <input type="radio" name="q10" value="3"> Extremely difficult <br>
+            </div>
+
+            <div class="navigation">
+                <button type="button" onclick="prevQuestion()" id="prevBtn" style="display: none;">Back</button>
+                <button type="button" onclick="nextQuestion()" id="nextBtn">Next Page</button>
+                <button type="button" onclick="calculateScore()" id="submitBtn" style="display: none;">Submit</button>
+            </div>
+        </form>
+
+        <div class="result-container" id="result-container">
+            <h3>Your Depression Assessment Result</h3>
+            <p id="result-text"></p>
+            <p><strong>Consider talking to a counselor in Karinspace for support.</strong></p>
+            <a href="https://tw.strikingly.com/s/sites/30263077/edit?uid=0cc86b81-0e09-7e7d-e807-88398be3d0d1" class="back-button">Back to Karinspace</a>
+        </div>
+
+        <div class="footer">
+            <p><strong>Disclaimer:</strong> This test is for informational purposes only and is not a medical diagnosis. If you are experiencing severe symptoms, please consult a healthcare professional.</p>
+            <p><strong>Confidentiality:</strong> No data from this test is collected or stored. Your responses remain private.</p>
+            <p><strong>Source:</strong> Patient Health Questionnaire-9 (PHQ-9), developed by Drs. Robert L. Spitzer, Janet B.W. Williams, and Kurt Kroenke, funded by an educational grant from Pfizer Inc. It is in the public domain.</p>
+        </div>
+    </div>
+
+    <script>
+        let currentQuestion = 0;
+        let questions = document.querySelectorAll(".question");
+        let prevButton = document.getElementById("prevBtn");
+        let nextButton = document.getElementById("nextBtn");
+        let submitButton = document.getElementById("submitBtn");
+        let resultContainer = document.getElementById("result-container");
+        let resultText = document.getElementById("result-text");
+
+        function nextQuestion() {
+            questions[currentQuestion].classList.remove("active");
+            currentQuestion++;
+
+            if (currentQuestion < questions.length) {
+                questions[currentQuestion].classList.add("active");
+            }
+
+            prevButton.style.display = (currentQuestion > 0) ? "inline-block" : "none";
+            nextButton.style.display = (currentQuestion < questions.length - 1) ? "inline-block" : "none";
+            submitButton.style.display = (currentQuestion === questions.length - 1) ? "inline-block" : "none";
+        }
+
+        function prevQuestion() {
+            questions[currentQuestion].classList.remove("active");
+            currentQuestion--;
+
+            if (currentQuestion >= 0) {
+                questions[currentQuestion].classList.add("active");
+            }
+
+            prevButton.style.display = (currentQuestion > 0) ? "inline-block" : "none";
+            nextButton.style.display = (currentQuestion < questions.length - 1) ? "inline-block" : "none";
+            submitButton.style.display = (currentQuestion === questions.length - 1) ? "inline-block" : "none";
+        }
+
+function calculateScore() {
+        let totalScore = 0;
+        for (let i = 1; i <= 9; i++) {
+            let selected = document.querySelector(`input[name="q${i}"]:checked`);
+            if (selected) {
+                totalScore += parseInt(selected.value);
+            }
+        }
+
+        let levelOfDepression = "";
+        if (totalScore <= 4) {
+            levelOfDepression = "Minimal depression. Maintain a healthy routine.";
+        } else if (totalScore <= 9) {
+            levelOfDepression = "Mild depression. Seeking support is recommended.";
+        } else if (totalScore <= 14) {
+            levelOfDepression = "Moderate depression. Professional help is advised.";
+        } else {
+            levelOfDepression = "Severe depression. Immediate professional assistance is highly recommended.";
+        }
+
+        resultText.innerHTML = "Total Score: " + totalScore + "<br>" + levelOfDepression;
+        document.querySelector("form").style.display = "none";
+        resultContainer.style.display = "block";
+    }
+    </script>
+
+</body>
+</html>
